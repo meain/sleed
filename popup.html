@@ -2,18 +2,48 @@
 <html>
   <head>
     <style>
+      body {
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+      * {
+        font-family: monaco, consolas, monospace;
+      }
       #slider {
         width: 300px;
+        margin: 10px 10px 0 10px;
       }
-      h2 {
+      #display {
+        margin-top: 10px;
         text-align: center;
+      }
+      .header {
+        clear: both;
+        color: white;
+        background-color: black;
+        padding: 5px;
+      }
+      h3 {
+        text-align: center;
+      }
+      .start {
+        float: left;
+        padding-left: 10px;
+        padding-bottom: 10px;
+      }
+      .end {
+        float: right;
+        padding-right: 10px;
+        padding-bottom: 10px;
       }
     </style>
   </head>
   <body>
-    <h2>Sleed</h2>
-    <div id="display">Current speed: 1</div>
+    <div class="header"><h3>Sleed</h3></div>
+    <div id="display">Choose speed on the slider</div>
     <input id="slider" type="range" min="0.25" max="10" value="1" step="0.25" />
+    <span class="start">0.25</span> <span class="end">10</span>
     <script src="popup.js"></script>
   </body>
 </html>
